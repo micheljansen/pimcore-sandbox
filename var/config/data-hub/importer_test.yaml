@@ -1,0 +1,13 @@
+pimcore_data_hub:
+    configurations:
+        importer_test:
+            general:
+                type: dataImporterDataObject
+                path: null
+                name: importer_test
+                modificationDate: 1648725223
+                createDate: 1648725223
+            workspaces: {  }
+            permissions:
+                user: {  }
+                role: {  }

@@ -1,0 +1,46 @@
+pimcore_data_hub:
+    configurations:
+        excel_test:
+            general:
+                active: true
+                type: dataImporterDataObject
+                name: excel_test
+                description: ''
+                group: ''
+                path: null
+                modificationDate: 1648726491
+                createDate: 1648726311
+            loaderConfig:
+                type: upload
+                settings:
+                    uploadFilePath: ''
+            interpreterConfig:
+                type: xlsx
+                settings:
+                    skipFirstRow: true
+                    sheetName: ProjectMilestoneTracking_25
+            resolverConfig:
+                elementType: dataObject
+                dataObjectClassId: '6'
+                loadingStrategy:
+                    type: notLoad
+                createLocationStrategy:
+                    type: staticPath
+                    settings:
+                        path: /
+                locationUpdateStrategy:
+                    type: noChange
+                publishingStrategy:
+                    type: noChangeUnpublishNew
+            processingConfig:
+                executionType: parallel
+                idDataIndex: ''
+            mappingConfig: {  }
+            executionConfig:
+                scheduleType: recurring
+                cronDefinition: ''
+                scheduledAt: ''
+            permissions:
+                user: {  }
+                role: {  }
+            workspaces: {  }

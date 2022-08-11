@@ -1,0 +1,24 @@
+pimcore:
+    custom_report:
+        definitions:
+            test:
+                name: test
+                sql: ''
+                dataSourceConfig: {  }
+                columnConfiguration: {  }
+                niceName: ''
+                group: ''
+                groupIconClass: ''
+                iconClass: ''
+                menuShortcut: null
+                reportClass: null
+                chartType: null
+                pieColumn: null
+                pieLabelColumn: null
+                xAxis: null
+                yAxis: null
+                modificationDate: 1644331661
+                creationDate: 1644331661
+                shareGlobally: null
+                sharedUserNames: null
+                sharedRoleNames: null

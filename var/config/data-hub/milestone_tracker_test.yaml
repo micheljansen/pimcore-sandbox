@@ -1,0 +1,48 @@
+pimcore_data_hub:
+    configurations:
+        milestone_tracker_test:
+            general:
+                active: true
+                type: dataImporterDataObject
+                name: milestone_tracker_test
+                description: ''
+                group: ''
+                path: null
+                modificationDate: 1648797222
+                createDate: 1648796896
+            loaderConfig:
+                type: upload
+                settings:
+                    uploadFilePath: milestone_tracker_test/upload.import
+            interpreterConfig:
+                type: xlsx
+                settings:
+                    skipFirstRow: true
+                    sheetName: ProjectMilestoneTracking_25
+            resolverConfig:
+                elementType: dataObject
+                dataObjectClassId: '6'
+                loadingStrategy:
+                    type: id
+                    settings:
+                        dataSourceIndex: '0'
+                createLocationStrategy:
+                    type: staticPath
+                    settings:
+                        path: /
+                locationUpdateStrategy:
+                    type: noChange
+                publishingStrategy:
+                    type: noChangeUnpublishNew
+            processingConfig:
+                executionType: parallel
+                idDataIndex: ''
+            mappingConfig: {  }
+            executionConfig:
+                scheduleType: recurring
+                cronDefinition: ''
+                scheduledAt: ''
+            permissions:
+                user: {  }
+                role: {  }
+            workspaces: {  }

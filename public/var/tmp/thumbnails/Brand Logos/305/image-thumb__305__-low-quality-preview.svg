@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100" viewBox="0 0 400 100" preserveAspectRatio="xMidYMid slice">
+	<filter id="blur" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feGaussianBlur stdDeviation="20 20" edgeMode="duplicate" />
+    <feComponentTransfer>
+      <feFuncA type="discrete" tableValues="1 1" />
+    </feComponentTransfer>
+  </filter>
+    <image filter="url(#blur)" x="0" y="0" height="100%" width="100%" xlink:href="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////2wBDAf//////////////////////////////////////////////////////////////////////////////////////wAARCABkAZADASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAgABA//EACgQAQEAAQMEAQQCAwEAAAAAAAABEQIhMRJBYXFRQoGh8DKRIlKx4f/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwBEhBEmAmoQWWj3n7y0GtTAYSEESEESEESEESEESEESEESEESEESEESEESEESEESEESEESEESEESEESEESEESYCahBNvFaNAb+/h0DV+/hs4BEhBrUwGEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBrWc30wESEE29vbR7gy/v4LTxB1fv4WngGkhBEhBrWTdgIkIIguqz4bLmAiTn1W0CJCCJCCJCCJCCJCCJDc9gRDpucoESEESEESC2z0DSGXVZnEZLvi8g0kIIkIIkIIkIM08f2aEESAG8t2g3V8DvQLqn/pbUOijvAdCCapeWgiTAZNp+/JIQRIQG73Hhui8xv1T0F21ZArx7ZNtRc6vX/Q+oD4Wbd5Nma+yz4oKXKurFxYpnqu2JR1cwG9XjY7ZFiVz51AWb8FLtlrndpgG5t4jZc+2S4k2rN85wBW4Wb3mw3fVCvADp7lbjbms0dxl3t5As2cw89wttmMVmLdOAbm3iNlznwM1Y2sbtvYDVr4Z1X/AFrLwDdPEZd9W3hsmZN6P8b7A+Fm3eTZmu7Tys+KClyurFxZhTPVxcUb/KfYG5vxscuZlXi+g09wbm9orqs5hbSOc3uaDostGwGZ/tmLfBySMBnTDQgiQgN0r/LT6dBBkpK6ZWSA1qEESEGfV9m65t6XTEDNPHtn1ugdM+AZq4OXMWB6YCzv4Zq5hySDiA0btqyfDOQVuIy5unzy3piBmm7NzvJPuumKSQBu1lO3EbjIYgM091NtV8l0z4VkoK3CzZpz3XTFZkFtR0834Lpi4BLXwQYlBaeIzVvZIXTPhYkAdU2ng5cxodMBZ38M1fyn2PEg4gNvFZo7liDiAzVc3ELbTF0xnTAaSEGtTAYSYDCTAYSYCahBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEhBEkAkkDGpAJJAxqQCSQCSQCSQCSQCSQCSQCSQCSQCSQCSQCSQCSQCSQCSQCSQCSQCSQCSQCSQCSQP//Z" />
+</svg>

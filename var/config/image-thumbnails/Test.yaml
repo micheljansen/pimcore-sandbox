@@ -1,0 +1,25 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    Test:
+                        items:
+                            -
+                                method: rotate
+                                arguments:
+                                    angle: 90
+                        medias: {  }
+                        name: Test
+                        description: ''
+                        group: ''
+                        format: SOURCE
+                        quality: 85
+                        highResolution: !!float 0
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1644956534
+                        creationDate: 1644956406
+                        preserveAnimation: false

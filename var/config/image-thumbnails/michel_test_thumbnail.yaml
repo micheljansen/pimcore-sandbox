@@ -1,0 +1,27 @@
+pimcore:
+    assets:
+        image:
+            thumbnails:
+                definitions:
+                    michel_test_thumbnail:
+                        items:
+                            -
+                                method: contain
+                                arguments:
+                                    width: 100
+                                    height: 100
+                                    forceResize: false
+                        medias: {  }
+                        name: michel_test_thumbnail
+                        description: ''
+                        group: ''
+                        format: SOURCE
+                        quality: 85
+                        highResolution: 0.0
+                        preserveColor: false
+                        preserveMetaData: false
+                        rasterizeSVG: false
+                        downloadable: false
+                        modificationDate: 1649170363
+                        creationDate: 1649170267
+                        preserveAnimation: false
