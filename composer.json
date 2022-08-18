@@ -13,6 +13,7 @@
   "minimum-stability": "dev",
   "require": {
     "hwi/oauth-bundle": "^1.2.0",
+    "league/flysystem-aws-s3-v3": "^3.2",
     "php-http/guzzle7-adapter": "^0.1.1",
     "php-http/httplug-bundle": "^1",
     "pimcore/customer-management-framework-bundle": "^3.0",
