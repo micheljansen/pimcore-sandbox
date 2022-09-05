@@ -1,0 +1,104 @@
+
+services:
+    assets_s3:
+        class: 'Aws\S3\S3Client'
+        arguments:
+            -  endpoint: 'https://ams3.digitaloceanspaces.com'
+               region: 'ams3'
+               version: 'latest'
+               credentials:
+                 key: '%env(S3_STORAGE_KEY)%'
+                 secret: '%env(S3_STORAGE_SECRET)%'
+
+flysystem:
+    storages:
+        pimcore.asset.storage:
+            adapter: 'aws'
+            visibility: public
+            options:
+                client: 'assets_s3'
+                bucket: 'michel-prod'
+                prefix: asset
+        pimcore.asset.storage.source:
+           # Storage for asset source files, directory structure is equal to the asset tree structure
+           adapter: 'local'
+           visibility: public
+           options:
+               directory: '%kernel.project_dir%/public/var/assets'
+        pimcore.asset.storage.target:
+            adapter: 'aws'
+            visibility: public
+            options:
+                client: 'assets_s3'
+                bucket: 'michel-prod'
+                prefix: asset
+        pimcore.asset_cache.storage:
+           # Storage for cached asset files, e.g. PDF and image files generated out of Office files or videos
+           # which are then used by the thumbnail engine as source files
+           adapter: 'local'
+           visibility: private
+           options:
+               directory: '%kernel.project_dir%/public/var/tmp/asset-cache'
+        pimcore.thumbnail.storage.source:
+           # Storage for image and video thumbnails, directory structure is equal to the source asset tree
+           adapter: 'local'
+           visibility: public
+           options:
+               directory: '%kernel.project_dir%/public/var/tmp/thumbnails'
+               permissions:
+                   file:
+                       private: 0644
+                   dir:
+                       private: 0755
+        pimcore.thumbnail.storage.target:
+           # Storage for image and video thumbnails, directory structure is equal to the source asset tree
+           adapter: 'aws'
+           visibility: public
+           options:
+             client: 'assets_s3'
+             bucket: 'michel-prod'
+             prefix: thumbnail
+        pimcore.thumbnail.storage:
+           # Storage for image and video thumbnails, directory structure is equal to the source asset tree
+           adapter: 'aws'
+           visibility: public
+           options:
+             client: 'assets_s3'
+             bucket: 'michel-prod'
+             prefix: thumbnail
+        pimcore.version.storage.source:
+           # Storage for serialized versioning data of documents/asset/data objects
+           adapter: 'local'
+           visibility: private
+           options:
+               directory: '%kernel.project_dir%/var/versions'
+        pimcore.version.storage:
+           # Storage for serialized versioning data of documents/asset/data objects
+           adapter: 'aws'
+           visibility: private
+           options:
+             client: 'assets_s3'
+             bucket: 'michel-prod'
+             prefix: version
+        pimcore.version.storage.target:
+           # Storage for serialized versioning data of documents/asset/data objects
+           adapter: 'aws'
+           visibility: private
+           options:
+             client: 'assets_s3'
+             bucket: 'michel-prod'
+             prefix: version
+        pimcore.recycle_bin.storage:
+           # Storage for serialized recycle bin data of documents/asset/data objects
+           adapter: 'local'
+           visibility: private
+           options:
+               directory: '%kernel.project_dir%/var/recyclebin'
+        pimcore.admin.storage:
+           # Storage for shared admin resources, such as the user avatar, custom logos, ...
+           adapter: 'local'
+           visibility: private
+           options:
+               directory: '%kernel.project_dir%/var/admin'
+
+
