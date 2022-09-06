@@ -13,11 +13,13 @@
   "minimum-stability": "dev",
   "require": {
     "hwi/oauth-bundle": "^1.2.0",
+    "league/flysystem": "^3.2",
+    "league/flysystem-aws-s3-v3": "^3.2",
     "php-http/guzzle7-adapter": "^0.1.1",
     "php-http/httplug-bundle": "^1",
     "pimcore/customer-management-framework-bundle": "^3.0",
     "pimcore/data-hub": "^1.0",
-    "pimcore/data-importer": "^1.4",
+    "pimcore/data-importer": "^1.7",
     "pimcore/payment-provider-unzer": "^1.0",
     "pimcore/pimcore": "^10.0",
     "pimcore/web2print-tools-bundle": "^4.0"
